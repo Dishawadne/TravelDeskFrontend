@@ -1,0 +1,48 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap; 
+  background-image: url("/public/images/image5.jpg"); 
+  background-size: cover;
+  background-position: center;
+  color: rgb(14, 12, 12);
+  height: 82vh; 
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+.text-content {
+animation: fadeIn 2s ease-in-out;
+}
+
+
+.home-container h1, .home-container p {
+  padding: 10px;
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

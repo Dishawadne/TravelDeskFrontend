@@ -1,0 +1,145 @@
+.main-content div{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .main-content header{
+    display: flex;
+    background-color: rgb(9, 16, 41);
+    height: 10vh;
+    width: 100%;
+    justify-content: flex-end;
+    color: white;
+   }
+   .main-content header h2{
+    margin-right: 6rem;
+   }
+   .main-content header button{
+    margin-right: 3rem;
+    color: rgb(0, 235, 252);
+    height: 6vh;
+    width: 7rem;
+    margin-top: 2vh;
+    background-color: rgba(36, 104, 104, 0.959);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+   }
+   .main-content header .button1{
+    margin-right: 3rem;
+    color: rgb(0, 67, 252);
+    height: 6vh;
+    width: 9rem;
+    margin-top: 2vh;
+    background-color: rgba(36, 54, 104, 0.959);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+   }
+   .main-content form{
+    margin-left: 500px;
+    margin-top: 5vh;
+    height: 80vh;
+    width: 500px;
+    box-shadow: 5px 5px 25px rgb(255, 243, 243);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+  }
+  .main-content form:hover{
+    box-shadow: 5px 15px 45px rgb(255, 249, 249);
+  }
+  .main-content .heading{
+    padding-top: 10px;
+    color: white;
+  }
+  .main-content .form1{
+    height: 30px;
+    width: 200px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.39);
+    color: black;
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+  }
+  .main-content .btn{
+    height: 40px;
+    width: 120px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 3vh;
+    border: none;
+    font-size: 17px;
+   
+  }
+  .main-content .btn:hover{
+    background-color: rgb(38, 104, 93);
+    color: black;
+  }
+  .main-content p{
+    margin-top: 10px;
+    color: rgb(158, 60, 11);
+    font-weight: bold;
+  }
+  .main-content form div{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .main-content div label{
+    margin-top: 18px;
+  }
+  .main-content div input, select{
+    height:4vh;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 2vh;
+    background-color: rgba(255, 255, 255, 0.534);
+  }
+  .usertable h2{
+    margin-top: 50px;
+    margin-left: 45%;
+    color: white;
+  }
+
+  .usertable .table{
+    margin-left: 255px;
+  }
+  .usertable .table th{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+    color: black;
+  }
+  .usertable .table td{
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+ 
+  th, td {
+    padding: 20px;
+    text-align: center;
+  }
+  .usertable .editBtn{
+    background-color: rgb(22, 70, 10);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .usertable .delBtn{
+    background-color: rgb(143, 11, 18);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+  }
