@@ -7,12 +7,14 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import AdminDashboard from './components/AdminDashboard';
-import EmployeeDashboard from './components/EmployeeDashboard';
+
 import HRTravelAdminDashboard from './components/HRTravelAdmin';
 import ManagerDashboard from './components/ManagerDashboard';
 import './App.css';
-import CreateTravelRequest from './components/CreateTravelRequest';
-import RequestHistory from './components/RequestHistory';
+
+
+
+import TravelRequestForm from './components/TravelRequestForm';
 
 const App = () => {
   return (
@@ -27,9 +29,7 @@ const App = () => {
           
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
-          <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
-          <Route path="/create-request" element={<CreateTravelRequest />} />
-          <Route path="/history" element={<RequestHistory />} />
+          <Route path="/employee-dashboard" element={<TravelRequestForm />} />
           <Route path="/hr-travel-admin-dashboard" element={<HRTravelAdminDashboard/>} />
           <Route path="/manager-dashboard" element={<ManagerDashboard />} />
         </Routes>
