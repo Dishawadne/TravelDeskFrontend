@@ -1,4 +1,4 @@
-/* src/components/Header.css */
+/* src/components/Header.css
 .header {
     display: flex;
     justify-content: space-between;
@@ -32,4 +32,41 @@
     background-color: grey;
     color: black;
   }
-  
+   */
+   .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 96%;
+    padding: 20px 40px;
+    background-color: rgb(9, 16, 41);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: whitesmoke;
+  }
+ 
+  .header-title{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+ 
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+ 
+  .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .button:hover {
+    background-color: grey;
+    color: black;
+  }
+ 
+ 

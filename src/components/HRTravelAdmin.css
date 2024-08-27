@@ -1,0 +1,112 @@
+
+  .traveladmin-dashboard h1{
+    color: white;
+  }
+  .traveladmin-dashboard table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* margin-left: 120px; */
+  }
+   
+  .traveladmin-dashboard th, .traveladmin-dashboard td {
+    border: 1px solid #6b5656;
+    padding: 8px;
+  }
+  .traveladmin-dashboard tbody{
+    background-color: black;
+      opacity: 0.8;
+      color: white;
+  }
+  .traveladmin-dashboard thead{
+    background-color: rgb(255, 255, 255);
+      opacity: 0.8;
+      color: black;
+  }
+  .traveladmin-dashboard .return-employee-button{
+    background-color: rgb(143, 11, 18);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+    width: 100px;
+  }
+  .traveladmin-dashboard table .return-employee-button:hover{
+    box-shadow: 5px 5px 25px rgb(255, 252, 252);
+  }
+  .traveladmin-dashboard table .book-button{
+    background-color: rgb(22, 70, 10);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+    width: 100px;
+  }
+  .traveladmin-dashboard table .book-button:hover{
+    box-shadow: 5px 5px 25px rgb(255, 252, 252);
+  }
+  .traveladmin-dashboard table .return-manager-button{
+    background-color: rgb(11, 68, 143);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+    width: 100px;
+  }
+  .traveladmin-dashboard table .return-manager-button:hover{
+    box-shadow: 5px 5px 25px rgb(255, 252, 252);
+  }
+  .traveladmin-dashboard div{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .traveladmin-dashboard header{
+    display: flex;
+    background-color: rgb(9, 16, 41);
+    height: 12vh;
+    width: 100%;
+    justify-content: flex-end;
+    color: white;
+   }
+   .traveladmin-dashboard header h1{
+    margin-right: 45rem;
+   }
+   .traveladmin-dashboard header h2{
+    margin-right: 6rem;
+    margin-top: 4vh;
+   }
+   .traveladmin-dashboard header button{
+    margin-right: 3rem;
+    margin-top: 4vh;
+    height: 7vh;
+    width: 7rem;
+    margin-top: 2vh;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+   }
+   .traveladmin-dashboard table thead tr .width{
+    width: 28%;
+   }
+   .traveladmin-dashboard table tbody tr button{
+    height: 8vh;
+    width: 50px;
+   }
+   .traveladmin-dashboard table tbody tr .close-button{
+    background-color: blueviolet;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 15px;
+      width: 200px;
+    }
+    .traveladmin-dashboard table tbody tr .close-button:hover{
+      box-shadow: 5px 5px 25px rgb(255, 252, 252);
+    }
