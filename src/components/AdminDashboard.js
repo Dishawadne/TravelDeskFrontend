@@ -381,7 +381,7 @@ const AdminDashboard = () => {
     const [message, setMessage] = useState('');
     const [editMode, setEditMode] = useState(false);
     const [editUserId, setEditUserId] = useState(null);
-    const [showForm, setShowForm] = useState(false); // State to control form visibility
+    const [showForm, setShowForm] = useState(false); 
     const [adminFirstName, setAdminFirstName] = useState('');
     const navigate = useNavigate();
  
@@ -397,7 +397,7 @@ const AdminDashboard = () => {
     }, []);
  
     const getToken = () => {
-        return localStorage.getItem('token'); // Retrieve the token from local storage
+        return localStorage.getItem('token'); 
     };
  
     const fetchRoles = async () => {
@@ -484,7 +484,7 @@ const AdminDashboard = () => {
                 RoleId: '',
                 ManagerId: ''
             });
-            setShowForm(false); // Hide form after submission
+            setShowForm(false); 
             fetchUsers();
         } catch (error) {
             setMessage(editMode ? 'Failed to update user' : 'Failed to add user');
@@ -657,7 +657,6 @@ const AdminDashboard = () => {
  
             <div className='usertable'>
                 <h2>Total Users: {users.length}</h2>
-                <table className="table">
                     <thead>
                         <tr>
                             <th>First Name</th>
@@ -689,7 +688,6 @@ const AdminDashboard = () => {
                             </tr>
                         ))}
                     </tbody>
-                </table>
             </div>
         </div>
     );

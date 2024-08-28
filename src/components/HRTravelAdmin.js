@@ -115,7 +115,7 @@ const HRTravelAdmin = () => {
         <div className='traveladmin-dashboard'>
             <header>
                 <h1>TravelDesk</h1>
-                <h2>Welcome, {userName}</h2> {/* Display the correct user name */}
+                <h2>Welcome, {userName}</h2> 
                 <button className='button' onClick={handleLogout}>Logout</button>
             </header>
             <h1>Travel Admin Dashboard</h1>
@@ -146,7 +146,7 @@ const HRTravelAdmin = () => {
                                 <tr key={request.requestId}>
                                     <td>{request.requestId}</td>
                                     <td>{request.userId}</td>
-                                    <td>{request.user?.firstName} {request.user?.lastName || ''}</td>
+                                    <td>{request.userName}</td>
                                     <td>{request.projectName}</td>
                                     <td>{request.reasonForTravelling}</td>
                                     <td>{new Date(request.fromDate).toLocaleDateString()}</td>
@@ -161,15 +161,15 @@ const HRTravelAdmin = () => {
                                     </td>
                                     <td>{request.status}</td>
                                     <td>
-                                        {request.status === 6 ? (
+                                        {request.status === 'Completed' ? (
                                             <span>No actions available</span>
                                         ) : (
                                             <>
-                                                {request.status === 3 ? (
+                                                {request.status === 'Booked' ? (
                                                     <button className="close-button" onClick={() => handleCloseRequest(request.requestId)}>Close Request</button>
                                                 ) : (
                                                     <>
-                                                        <button className="book-button" onClick={() => handleBooking(request.requestId)}>Book Ticket</button>
+                                                        <button className="book-button" onClick={() => handleBooking(request.requestId)}>Book the Ticket</button>
                                                         <button className="return-manager-button" onClick={() => handleReturnToManager(request.requestId)}>Return to Manager</button>
                                                         <button className="return-employee-button" onClick={() => handleReturnToEmployee(request.requestId)}>Return to Employee</button>
                                                     </>

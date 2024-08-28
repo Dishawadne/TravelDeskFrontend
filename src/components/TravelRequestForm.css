@@ -1,146 +1,40 @@
-/* .travel-request nav{
-  height: 5vh;
-  background-color: rgb(12, 8, 22);
-  width: 100%;
-  color: white;
-  font-size: 25px;
-  display: flex;
-  padding: 10px;
-}
-.travel-request nav div{
-  margin-left: 500px;
-}
-.travel-request nav button{
-  margin-left: 400px;
-  background-color: aqua;
-  border: none;
-  color: rgb(28, 37, 44);
-  border-radius: 10px;
-  height: 36px;
-  width: 100px;
-  color: rgb(0, 235, 252);
-  background-color: rgba(36, 104, 104, 0.959);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-}
-.travel-request .createBtn{
-  background-color: black;
-  color: white;
-  margin-top: 3vh;
-  height: 7vh;
-  font-size: 15px;
-  width: 300px;
-  border: none;
-  border-radius: 10px;
-}
-.travel-form{
-  margin-top: 5vh;
-  padding-top: 15px;
-  height: 650px;
-  margin-left: 450px;
-  margin-right: 450px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgba(2, 2, 2, 0.39);
-  color: rgb(255, 253, 253);
-  font-weight: bold;
-  box-shadow: 5px 5px 20px rgb(129, 127, 127);
-}
-.travel-form:hover{
-  box-shadow: 5px 15px 45px rgb(255, 253, 253);
-}
-.travel-form div{
-  display: flex;
-  justify-content: space-between;
-  padding-left: 80px;
-  padding-right: 80px;
-  margin-top: 5px;
-}
-.travel-form div label{
-  margin-top: 10px;
-}
-.travel-form div input, select{
-  height:5vh;
-  border: none;
-  border-radius: 10px;
-  width: 200px;
-  margin-top: 2vh;
-  background-color: rgba(255, 255, 255, 0.534);
-}
-.travel-form button{
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  padding: 13px;
-  margin-top: 20px;
-}
-.travel-form button:hover{
-  background-color: rgb(7, 32, 56);
-}
-.travel-form .adharInput{
-  background-color: rgba(32, 31, 31, 0.315);
-  border-radius: none;
-}
-.travel-request h2{
-  color: white;
-}
-.travel-requests-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 20px;
-}
-
-.travel-requests-table th, .travel-requests-table td {
-border: 1px solid #6b5656;
-padding: 8px;
-text-align: left;
-}
-.travel-requests-table tbody{
-background-color: black;
-  opacity: 0.8;
-  color: white;
-}
-.travel-requests-table thead{
-background-color: rgb(255, 255, 255);
-  opacity: 0.8;
-  color: black;
-} */
-
-.travel-request div{
+/* .travel-request div{
   display: flex;
   flex-wrap: wrap;
- }
+ } */
  .travel-request header{
   display: flex;
-  background-color: rgb(9, 16, 41);
-  height: 12vh;
-  width: 100%;
-  justify-content: flex-end;
-  color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 94%;
+    padding: 20px 40px;
+    background-color: rgb(9, 16, 41);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: whitesmoke;
  }
  .travel-request header h1{
-  margin-right: 55rem;
+  font-size: 2rem;
+    font-weight: bold;
  }
  .travel-request header div{
-  margin-right: 6rem;
-  margin-top: 4vh;
+  margin-left: 35rem;
+    font-size: 20px;
  }
  .travel-request header button{
-  margin-right: 3rem;
-  height: 7vh;
-  width: 7rem;
-  margin-top: 2vh;
-  color: white;
-  background-color: black;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
+  text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 16px;
  }
+ .travel-request header button:hover {
+  background-color: grey;
+  color: black;
+}
 .travel-request .createBtn{
     background-color: black;
     color: white;
@@ -154,15 +48,15 @@ background-color: rgb(255, 255, 255);
 .travel-form{
     margin-top: 5vh;
     padding-top: 15px;
-    height: 730px;
+    height: 750px;
     margin-left: 450px;
     margin-right: 450px;
     border-radius: 10px;
     border: none;
-    background-color: rgba(2, 2, 2, 0.39);
-    color: rgb(255, 253, 253);
+    box-shadow: 5px 5px 25px rgb(255, 243, 243);
     font-weight: bold;
-    box-shadow: 5px 5px 20px rgb(129, 127, 127);
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
 }
 .travel-form:hover{
     box-shadow: 5px 15px 45px rgb(255, 253, 253);
@@ -175,7 +69,7 @@ background-color: rgb(255, 255, 255);
     margin-top: 5px;
 }
 .travel-form div label{
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .travel-form div input, select{
     height:5vh;
@@ -201,28 +95,43 @@ background-color: rgb(255, 255, 255);
     background-color: rgba(32, 31, 31, 0.315);
     border-radius: none;
   }
-.travel-requests-table h2{
-  margin-left: 42%;
+.travel-request h2{
     color: white;
 }
 .travel-requests-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+
 }
  
 .travel-requests-table th, .travel-requests-table td {
   border: 1px solid #6b5656;
-  padding: 8px;
-  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
 }
 .travel-requests-table tbody{
   background-color: black;
     opacity: 0.8;
     color: white;
 }
+.travel-requests-table .editBtn{
+  background-color: rgba(0, 128, 0, 0.849);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 5vh;
+  width: 70px;
+}
+.travel-requests-table .editBtn:hover{
+  box-shadow: 5px 5px 25px rgb(255, 252, 252);
+}
 .travel-requests-table thead{
   background-color: rgb(255, 255, 255);
     opacity: 0.8;
     color: black;
+}
+.travel-requests-table  thead tr .nameWidth{
+  width: 100px;
 }

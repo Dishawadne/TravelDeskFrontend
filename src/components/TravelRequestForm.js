@@ -309,7 +309,7 @@ const TravelRequestForm = () => {
           </div>
           
           <div>
-            <label htmlFor="aadhaarFile">Upload Aadhar Card:</label>
+            <label htmlFor="aadhaarFile">Aadhar Card:</label>
             <input
               type="file"
               id="aadhaarFile"
@@ -325,11 +325,10 @@ const TravelRequestForm = () => {
 
       <div className='travel-requests-table'>
       <h2>Travel Request History</h2>
-        <table>
-          <thead>
+        <thead>
             <tr>
               <th>Request ID</th>
-              <th>Name</th> 
+              <th className='nameWidth'>Name</th> 
               <th>Reason for Travelling</th>
               <th>Project Name</th>
               <th>From Location</th>
@@ -356,13 +355,13 @@ const TravelRequestForm = () => {
                 <td>{request.comments ? request.comments : 'N/A'}</td>
                 <td>
                    {request.status === 'Rejected' && (
-                   <button onClick={() => handleEditRequest(request)}>Edit</button>
+                   <button className="editBtn" onClick={() => handleEditRequest(request)}>Edit</button>
                  )}
                </td>
               </tr>
             ))}
           </tbody>
-        </table>
+        
       </div>
     </div>
   );

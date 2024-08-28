@@ -111,18 +111,21 @@
   color: white;
 }
  
-.usertable .table{
-  width: 100%;
+.usertable {
+  /* width: 100%; */
+  margin-left:12% ;
+  margin-right: 10%;
 }
-.usertable .table th{
+.usertable  th{
   background-color: rgb(255, 255, 255);
   opacity: 0.8;
   color: black;
 }
-.usertable .table td{
+.usertable  td{
   background-color: black;
   opacity: 0.8;
   color: white;
+  
 }
 table, th, td {
   border: 1px solid #ddd;
