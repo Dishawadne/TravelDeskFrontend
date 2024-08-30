@@ -99,7 +99,6 @@ const TravelRequestForm = () => {
 
     try {
       if (isEdit) {
-        // Update request
         await axios.put(`https://localhost:7116/api/TravelRequest/${currentRequestId}`, form, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -107,7 +106,6 @@ const TravelRequestForm = () => {
         });
         alert('Travel request updated successfully!');
       } else {
-        // Create new request
         await axios.post('https://localhost:7116/api/TravelRequest', form, {
           headers: {
             'Content-Type': 'multipart/form-data',
@@ -118,8 +116,8 @@ const TravelRequestForm = () => {
 
       fetchTravelRequests(formData.userId);
       setShowForm(false); 
-      setIsEdit(false); // Reset edit mode
-      setCurrentRequestId(null); // Reset current request ID
+      setIsEdit(false); 
+      setCurrentRequestId(null); 
     } catch (error) {
       console.error('Error submitting the travel request:', error);
       alert('Error submitting the travel request.');
@@ -145,6 +143,7 @@ const TravelRequestForm = () => {
   };
 
   const handleEditRequest = (request) => {
+    const updatedStatus = (request.status === 'Rejected' || request.status === 'ReturnedToEmployee') ? 'Updated' : request.status;
     setFormData({
       userId: formData.userId,
       reasonForTravelling: request.reasonForTravelling,
@@ -154,7 +153,7 @@ const TravelRequestForm = () => {
       toLocation: request.toLocation,
       fromDate: formatDateForInput(request.fromDate),
       toDate: formatDateForInput(request.toDate),
-      status: request.status,
+      status: updatedStatus,
       name: formData.name,
       comments: request.comments || '',
     });
@@ -162,6 +161,7 @@ const TravelRequestForm = () => {
     setIsEdit(true);
     setShowForm(true);
   };
+  
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -328,6 +328,7 @@ const TravelRequestForm = () => {
         <thead>
             <tr>
               <th>Request ID</th>
+              <th>UserId</th>
               <th className='nameWidth'>Name</th> 
               <th>Reason for Travelling</th>
               <th>Project Name</th>
@@ -344,6 +345,7 @@ const TravelRequestForm = () => {
             {travelRequests.map(request => (
               <tr key={request.requestId}>
                 <td>{request.requestId}</td>
+                <td>{formData.userId}</td>
                 <td>{formData.name}</td>
                 <td>{request.reasonForTravelling}</td>
                 <td>{request.projectName}</td>
@@ -354,7 +356,7 @@ const TravelRequestForm = () => {
                 <td>{request.status}</td>
                 <td>{request.comments ? request.comments : 'N/A'}</td>
                 <td>
-                   {request.status === 'Rejected' && (
+                   {(request.status === 'Rejected' || request.status === 'ReturnedToEmployee') &&(
                    <button className="editBtn" onClick={() => handleEditRequest(request)}>Edit</button>
                  )}
                </td>

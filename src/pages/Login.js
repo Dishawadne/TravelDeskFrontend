@@ -127,19 +127,13 @@ const Login = () => {
             console.log('Full response data:', response.data);
  
             if (response.status === 200) {
-                const { token,firstName } = response.data; // Extract token from response
-                localStorage.setItem('token', token); // Store the token in local storage
+                const { token,firstName } = response.data; 
+                localStorage.setItem('token', token); 
                 localStorage.setItem('adminFirstName', firstName); 
- 
- 
-                // Decode the token using jwt-decode
                 const decodedToken = jwtDecode(token);
                 console.log('Decoded Token:', decodedToken);
  
-            
-                const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']; // Extract role using correct key
-               
-               // console.log('User ID:', id);
+            const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']; 
                // console.log('Role:', role);
  
                 // Navigate based on role

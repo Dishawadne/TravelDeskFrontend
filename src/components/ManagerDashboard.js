@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {jwtDecode} from 'jwt-decode'; // Ensure this import is correct
+import {jwtDecode} from 'jwt-decode'; 
 import { useNavigate } from 'react-router-dom';
 import './ManagerDashboard.css';
 
@@ -78,7 +78,7 @@ const ManagerDashboard = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-        navigate('/');
+        navigate('/login');
     };
 
     return (
@@ -101,6 +101,7 @@ const ManagerDashboard = () => {
                         <th>To Location</th>
                         <th>From Date</th>
                         <th>To Date</th>
+                        <th>Comments</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -117,6 +118,7 @@ const ManagerDashboard = () => {
                                 <td>{request.toLocation}</td>
                                 <td>{new Date(request.fromDate).toLocaleDateString()}</td>
                                 <td>{new Date(request.toDate).toLocaleDateString()}</td>
+                                <td>{request.comments ? request.comments : 'N/A'}</td>
                                 <td>{request.status}</td>
                                 <td>
                                     <button className="approve" onClick={() => handleRequestAction(request.requestId, 'approve')}>Approve</button>
